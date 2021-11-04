@@ -10,12 +10,12 @@ namespace ClassExtensionExample.Extension
     {
         public static string HarfDegistir(this string str)
         {
-            char[] cd = new char[str.Length];
+            char[] cd = str.ToCharArray();
             string ss = "";
-            for (int i = 0; i < str.Length; i++)
-            {
-                cd[i]= str[i];
-            }
+            //for (int i = 0; i < str.Length; i++)
+            //{
+            //    cd[i]= str[i];
+            //}
             for (int i = 0; i < str.Length; i++)
             {
                 if(str[i]!='a') cd[i] = '*';
