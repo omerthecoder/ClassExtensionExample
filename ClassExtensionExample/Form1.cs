@@ -20,7 +20,7 @@ namespace ClassExtensionExample
         private void button1_Click(object sender, EventArgs e)
         {
             
-            textBox1.Text = textBox1.Text.HarfDegistir();
+            textBox1.Text = textBox1.Text.HarfDegistir(textBox2.Text);
            
         }
     }

@@ -8,7 +8,7 @@ namespace ClassExtensionExample.Extension
 {
     public static class CustomExtensionClass
     {
-        public static string HarfDegistir(this string str)
+        public static string HarfDegistir(this string str,string charactersToChange)
         {
             char[] cd = str.ToCharArray();
             string ss = "";
@@ -18,7 +18,10 @@ namespace ClassExtensionExample.Extension
             //}
             for (int i = 0; i < str.Length; i++)
             {
-                if(str[i]!='a') cd[i] = '*';
+                for (int j = 0; j < charactersToChange.Length; j++)
+                {
+                    if (str[i] == charactersToChange[j]) cd[i] = '*'; 
+                }
                 
             }
             for (int i = 0; i < str.Length; i++)
